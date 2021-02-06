@@ -1,0 +1,93 @@
+# Git and Github introduction
+
+                                   ..< INTRODUCTION >..
+
+* In simple words, Git is a version controlling system that helps the user to manage your code automatically
+* Remember that git and github are two different things
+* Git - Git is a distributed version controlling system (software)
+        This is a tool which is made by linux Torvalds
+        Git is three stage architecture => 1. Working Directory, 2. Staging Area, 3. Git Repository
+* Github - Github is a online code hosting service
+        This is totally depend on git version controlling system
+* Alternatives - There are another alternatives of github like gitlab and bitbucket and much nore
+
+                                    ..< PRACTICE >..
+
+# Git basic commands
+1. "git" - It shows us all the commands which can used by us
+2. "git config --global user.name \"Here your name\" " - It user to set or change the global name of user
+3. "git config --global user.email \"Here your email\" " - It user to set or change the global email of user
+4. "git config user.name" - We can see the name of User using the git
+5. "git config user.email" - We can see the email of User using the git
+6. "pwd" - This will show the present working directory
+7. "ls" - This will show the files in the present working directory
+
+# Tracking Git repository
+1. "git status" - Ensure that the directory or working directory is a git repository or not
+2. "git init" - Initializing the Git repository or working directory and it will initializint to start the tracking
+3. "git add --a" - This will add all the files of directory in staging area
+   Note - "git add ." - We can also add all the files of working directory to staging area.
+4. "git add \"Here file name\" " - This will add the singular file to staging area of git.
+5. "git commit -m \"Here Your Message\" " - This will commit all the files from staging area.
+6. "git log" - This will show the commit of the .git repository.
+7. "rm -rf .git" - To delete or remove the .git file from the folder of working directory.
+
+# Cloning of git repository
+1. "git clone \"Here your URL\" \"Here Folder Name\" " - This will make the clone of git repository
+
+# Git First stage life-cycle
+    * The Lower level works of git are as follows:
+    1. "Un-tracked Files" - You have to initialize the working directory.
+    2. "Un-modified Files" - You have to start tracking and make the unmodified files by adding the files first time to git staging area.
+    3. "Modified Files" - You have to modify the files to make change the working directory as Modified.
+    4. "Staging Area" - You have to stage files by adding them to staging area for second time or more..
+    # Note - This are not commands, this are the work that git done in lower level software
+
+# Git Ignoring unwanted files
+1. "touch \"File Name\" " - make a new file.
+2. Make ".gitignore" file in working directory.
+3. Add unwanted file name in the ".gitignore" file.
+4. If You want to ignore all ".log" files then simply add "*.log" in ".gitignore" file.
+5. If you want to ignore a perticular directory then add "/directory/" to ".gitignore".
+6. If you want to ignore all the directory name as dir then add "dir/" to ".gitignore".
+
+# Git Difference between working directory and the staged/commited file
+1. To find the dirrerence, add the file to staging area and modify it then run the following command.
+2. "git diff" - It shows the difference between staging area and the working directory
+3. "git diff --staged" It shows the difference between commited file and staging area
+
+# Git how to commit
+1. Don't commit as a 'date' or "changed index.html" etc
+2. Commit should be informative
+3. Commit should not start from changed or date
+4. Use commit as a message to inform user that what bugs are fixed by the code
+
+# Git delete/rename/etc
+1. "git rm \"File Name\" " - Delete or remove the file from working directory
+2. "rm -rf .git" - Delete the .git repository from the working directory.
+3. "git rm -f \"File Name\" " -Forced to Delete or remove the file from working directory
+4. "git mv \"File to Rename\"  \"Rename File Name\" " - Rename the file of working directory
+5. "git rm --cached \"File name\" " - Remove the file from tracking.
+
+# Git Logs/Differences/etc
+1. "git log" - Showing the commits of .git repository.
+2. "git log -p" - Showing the commits as well as the lines that are add or remove in commits.
+3. "git log -p -2" - Showing the 2 days ago commits as well as lines that are add or remove in commits
+4. "git log --stat" - Showing the commits in the statically way, i.e it will show how many lines add and remove
+5. "git log --pretty=oneline" - This will prettify the commits in one-line.
+6. "git log --pretty=short" - This will shortly show the commits.
+7. "git log --pretty=full" - This will show slightly more information about the commit.
+8. "git log --since=2.days/months/years" - Showing the 2 days ago commits.
+9. "git log --pretty=format:\"Git Formats\" " - We can prettyfy the folder as we want from git.
+10."git commit --amend" - we can change the commited message in the git working directory.
+
+# Git Unstaged/Restored
+1. "git restore --staged \"File Name\" " - This will unstage the working directory from staging area if its in staging area
+2. "git checkout -- File Name" - This will restore the file from the recently staging area.
+3. "git checkout -f" - This will restore the file from the recently commit.
+
+# Git Pull/Push
+Note - While hosting the code on github, you have to add a SSH key for some security reason.
+1. "git remote add origin \"Here Hosting Site\" " - Adding the hosting page of your repository
+2. "git remote -v" - Showing the hosting page of your repository
+3.  
